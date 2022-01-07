@@ -11,7 +11,7 @@ function BookShelf({bookShelfTitle, books, changeStatus, bookStatus}) {
                         book={book}
                         key={uuid()}
                         changeStatus={changeStatus}
-                        bookStatus={ bookStatus}
+                        bookStatus={bookStatus}
                         />
                         ):null}
                     </ol>
