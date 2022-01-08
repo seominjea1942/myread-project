@@ -27,7 +27,7 @@ function BookList({books, changeStatus,bookStatus}) {
               </div>
             </div>
             <div className="open-search">
-              <Link to="/create">
+              <Link to="/search">
                   <button>
                   Add a book
                   </button>

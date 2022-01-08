@@ -55,7 +55,7 @@ function App() {
           changeStatus={changeStatus}
           bookStatus={bookStatus}
           />}/>
-        <Route path='/create' element={<CreateBook
+        <Route path='/search' element={<CreateBook
           searchBook={searchBook}
           searchedBooks={searchedBooks}
           changeStatus={changeStatus}
