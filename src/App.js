@@ -18,6 +18,7 @@ function App() {
   }
 
   const searchBook =(keyword)=>{
+    if(keyword!==''){
     BooksAPI.search(keyword)
     .then(result=>{
       if(result&&result.length>0){
@@ -31,6 +32,7 @@ function App() {
       setSearchedBooks(result)
     }
     })
+  }
   }
 
   useEffect(()=> {
