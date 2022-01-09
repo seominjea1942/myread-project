@@ -12,14 +12,13 @@ function CreateBook({searchBook, searchedBooks,changeStatus, bookStatus, setSear
               >Go back</Link>
               <div className="search-books-input-wrapper">
                 <input type="text" onChange={(e)=>{
-                    if(e.target.value !==''){
                     searchBook(e.target.value)
-                    }
                 }} placeholder="Search by title or author"/>
               </div>
             </div>
             <div className="search-books-results">
               <ol className="books-grid">
+                  {console.log(searchedBooks)}
                   {(searchedBooks&&searchedBooks.length>0)?
                   searchedBooks.map(book=><Book
                   book={book}

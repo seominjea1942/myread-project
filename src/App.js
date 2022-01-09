@@ -19,20 +19,24 @@ function App() {
 
   const searchBook =(keyword)=>{
     if(keyword!==''){
-    BooksAPI.search(keyword)
-    .then(result=>{
-      if(result&&result.length>0){
-      books.forEach((book)=>{
-       result.forEach((item)=>{
-        if(book.title===item.title && book.description === item.description){
-          item.shelf = book.shelf
-        }
-       })
-      })
-      setSearchedBooks(result)
+      BooksAPI.search(keyword)
+      .then(result=>{
+        if(result&&result.length>0){
+          books.forEach((book)=>{
+          result.forEach((item)=>{
+            if(book.title===item.title && book.description === item.description){
+              item.shelf = book.shelf
+            }
+          })
+          })
+          setSearchedBooks(result)
+        } else {
+      setSearchedBooks([])
     }
-    })
-  }
+      })
+    } else {
+      setSearchedBooks([])
+    }
   }
 
   useEffect(()=> {
